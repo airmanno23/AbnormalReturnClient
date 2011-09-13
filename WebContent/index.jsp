@@ -12,7 +12,7 @@ String url = request.getParameter("url");
 %>
 <body>
 <div class="container">
-  <div class="header"><a href="#"><img src="" alt="Insert Logo Here" name="Insert_logo" width="180" height="90" id="Insert_logo" style="background: #C6D580; display:block;" /></a> 
+  <div class="header"> 
     <!-- end .header --></div>
   <div class="sidebar1">
     <form action="controller" method="post">
@@ -50,14 +50,32 @@ String url = request.getParameter("url");
         <li style="text-align: center;"><input name="Import" type="submit"></li>
       </ul>
     </form>
-    <p>&nbsp;</p>
   </div>
-  <div class="content">
-    <h1>Output</h1>
-  <%if(url==null){ %>
-    <div></div>
+  <div class="content">   
+  <%if(url == null){ %>
+    <div><h1 class="left-top">Welcome</h1>
+    </div> 
+    <div class="clear"></div>
+    <div id="output">
+	    <p class="intro">
+	    In stock market trading, abnormal returns are the differences between a single stock or 
+	    portfolio's performance and the expected return over a set period of time.[1] Usually a 
+	    broad index, such as the S&P 500 or a national index like the Nikkei 225, is used as a 
+	    benchmark to determine the expected return.
+	    </p>
+	    <p class="intro"> 
+	    For example if a stock increased by 5% because of some news which affected the stock price, 
+	    but the average market only increased by 3% and the stock has a beta of 1, then the abnormal
+	    return was 2% (5% - 3% = 2%). If the market average performs better (after adjusting for 
+	    beta) than the individual stock then the abnormal return will be negative.
+	    </p>
+    </div>
   <%}else{ %>
-  	<div><%=url %></div>
+  	<div><h1 class="left-top">Output</h1>
+      <a href="<%=url %>" id="download">Download Report Data</a>
+    </div>
+    <div class="clear"></div>
+    <div id="output"><img src="stockpic.jpg" width="700px" /></div>
   <%} %>
   </div>
   <div class="footer">

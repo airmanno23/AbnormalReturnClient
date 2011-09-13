@@ -1,0 +1,165 @@
+@charset "UTF-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #666;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+input.text {
+	width: 140px;
+}
+
+.clear {
+  clear:both;
+}
+
+.brand {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.small-text {
+	padding: none;
+	margin: none;
+	font-size: 12px;
+	text-align: center;
+}
+
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+
+a#download {
+  float: left;
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 18px 0 0 30px;
+}
+
+a#download:hover {
+  text-decoration: underline;
+}
+
+p{
+  font-size: 14px;
+}
+
+p.intro {
+  font-size: 15px;
+  width: 700px;
+  text-align: justify;	
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 
+	padding-right: 15px;
+	padding-left: 15px; 
+}
+
+h1.left-top {
+  float: left;
+}
+a img { 
+	border: none;
+}
+
+.container {
+	width: 960px;
+	background: #FFF;
+	margin: 0 auto; 
+}
+
+.header {
+	background: url(nike-logo1.png) no-repeat center #ADB96E;
+	height: 174px;
+	border-bottom: 1px solid #666;
+}
+
+.sidebar1, sidebar-hidden {
+	float: right;
+	width: 180px;
+	background: #EADCAE;
+	border-left: 1px solid #666;
+}
+
+.sidebar-hidden {
+	display: none;
+}
+
+.content {
+	padding: 10px 0;
+	width: 779px;
+	float: right;
+}
+
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; 
+}
+
+ul.nav {
+	list-style: none; 
+}
+
+ul.nav li {
+	border-bottom: 1px solid #666; 
+	padding: 5px 5px 5px 15px;
+	display: block; 
+	width: 160px;  
+	text-decoration: none;
+	background: #ADB96E;
+}
+
+ul.nav li.last {
+  border-bottom: 0px;
+}
+
+ul.nav li a {
+	text-decoration: none;
+	color: #000;
+}
+
+ul.nav li:hover, ul.nav li:active, ul.nav li:focus { 
+	background: #f8cb0c;
+	color: #000;
+}
+
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
+	color: #000;
+}
+
+ul.nav li.title {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+div#output {
+  padding: 0 0 0 40px;
+}
+
+.footer {
+	padding: 10px 0 5px 0 ;
+	text-align: center;
+	background: #CCC49F;
+	position: relative;
+	clear: both; 
+	border-top: 1px solid #666;
+}
+
+.fltrt {  
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { 
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { 
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
