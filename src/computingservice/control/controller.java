@@ -1,6 +1,8 @@
 package computingservice.control;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,6 +40,9 @@ public class controller extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
 		String wsURL = "http://localhost:8081/ComputingService";
 		ComputingServiceServiceStub stub = new ComputingServiceServiceStub(wsURL);
 		
@@ -52,13 +57,20 @@ public class controller extends HttpServlet {
 		req.setUseCorporateActions("");
 		
 		InvokeResponse rsp = new InvokeResponse();
+		String result = "";
 		try {
 			rsp = stub.invoke(req);
-			
+			result = rsp.get_return();
 		} catch (ComputingServiceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		out.println("<html><head><title>Dowload the Result File</title></head>");
+		out.println("<body><table><tr><td>URL: " + result + "</td></tr>");
+		out.println("<tr><td><a href = \"" + result + "\">DOWNLOAD</td></tr>");
+		
+		out.println("</table></body></html>");
 	}
 
 }
